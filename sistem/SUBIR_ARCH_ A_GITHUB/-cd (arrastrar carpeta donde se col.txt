@@ -1,0 +1,21 @@
+-cd (arrastrar carpeta donde se colocaran archivos en git)
+
+#code> https> copiamos link= https://github.com/Edwar123CA/Proyecto_Edwar_CA.git
+
+-git clone https://github.com/Edwar123CA/Proyecto_Edwar_CA.git
+
+#añadimos los archivos en carpeta de ejemplo
+
+-cd carpeta_ejemplo/
+
+-git add .
+
+-git commit -m "mi primera chamba"
+
+-git push origin main
+
+
+#SI SALE UN ERROR ANTES AGREGAMOS ARCHIVOS POR SEPARADO:
+EJEMPLO:
+git add sistem/
+git add index.html
