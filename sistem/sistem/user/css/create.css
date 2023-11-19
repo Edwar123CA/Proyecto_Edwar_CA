@@ -1,40 +1,49 @@
-*{
+/* Agrega !important para garantizar que el estilo se aplique */
+.modal-content * {
+    color: black !important;
+}
+
+
+
+
+
+* {
     margin: 0;
     padding: 0;
     font-family: arial;
     color: #fff;
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
-    background: #000000;
-    display: grid;
+    background: #081b29;
+    display: flex; /* Cambiado a flexbox */
     justify-content: center;
-    align-content: center;
+    align-items: center; /* Centrar verticalmente */
 }
 
-::-webkit-input-placeholder{
+::-webkit-input-placeholder {
     color: #eee;
 }
 
-.wrapper{
+.wrapper {
     position: relative;
     width: 800px;
     height: 65vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 3px solid #ffffff;
-    box-shadow: 0 0 50px 0 #000000;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 50px 0 #00a6bc;
 }
 
-.banner{
+.banner {
     position: absolute;
     top: 0;
     right: 0;
     width: 450px;
     height: 100%;
-    background: linear-gradient(to right, rgb(0, 0, 0), #ff0000);
+    background: linear-gradient(to right, #0ef, #c800ff);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%);
     padding-right: 70px;
     text-align: right;
@@ -44,20 +53,20 @@ body{
     align-items: flex-end;
 }
 
-.wel_text{
+.wel_text {
     font-size: 40px;
     margin-top: -50px;
     line-height: 50px;
 }
 
-.para{
+.para {
     margin-top: 10px;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 1px;
 }
 
-.submit{
+.submit {
     border: none;
     outline: none;
     width: 288px;
@@ -67,26 +76,26 @@ body{
     border-radius: 40px;
     letter-spacing: 1px;
     cursor: pointer;
-    background: linear-gradient(45deg, rgb(0, 0, 0), #ff0000);
+    background: linear-gradient(45deg, #0ef, #c800ff);
 }
 
-.form{
+.form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
 }
 
-.title{
+.title {
     font-size: 35px;
 }
 
-.inp{
+.inp {
     padding-bottom: 10px;
     border-bottom: 2px solid #eee;
 }
 
-.input{
+.input {
     border: none;
     outline: none;
     background: none;
@@ -94,17 +103,16 @@ body{
     margin-top: 40px;
     padding-right: 10px;
     font-size: 17px;
-    color: rgb(255, 255, 255);
+    color: #0ef;
 }
 
-footer{
+footer {
     margin-top: 30px;
     letter-spacing: 0.5px;
     font-size: 14px;
 }
 
-.link{
-    color: rgb(255, 255, 255);
+.link {
+    color: #0ef;
     text-decoration: none;
-    font-size: 17px;
 }

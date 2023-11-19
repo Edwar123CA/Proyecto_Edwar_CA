@@ -1,6 +1,7 @@
 <?php
+session_start();
 // Incluye el archivo de conexión a la base de datos
-include "../data_base/conn.php"; // Asegúrate de que el nombre del archivo sea correcto
+include "sistem/data_base/conn.php"; // Asegúrate de que el nombre del archivo sea correcto
 
 $registroExitoso = false; // Variable para verificar si el registro fue exitoso
 
@@ -23,6 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error: " . $query . "<br>" . $conn->error;
     }
 }
+
+
 ?>
 
 
@@ -38,12 +41,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="sistem/user/css/login.css">
 </head>
 <body>
 <div class="wrapper">
         <form action="" method="POST" class="form">
-            <h1 class="title">Registro</h1>
+            <h1 class="title"></h1>
             <div class="inp">
                 <input type="text" name="username" class="input" placeholder="Usuario">
                 <i class="fa-solid fa-user"></i>
@@ -57,10 +60,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <i class="fa-solid fa-envelope"></i>
             </div>
             <button class="submit" type="submit">Registrar</button><br>
-            <p class="footer">¿Ya tienes una cuenta? <a href="login.php" class="link">Iniciar Sesión</a></p>
+            <p class="footer">¿Ya tienes una cuenta? <a href="index.html" class="link">Iniciar Sesión</a></p>
         </form>
         <!-- ... (otros elementos de la página) ... -->
+        <div class="banner">
+            <h1 class="wel_text">REGISTRO <br></h1>
+            <p class="para">  </p>
+
+        </div>
     </div>
+    
 
     
     <!-- Modal de Registro Exitoso -->
@@ -72,12 +81,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-dark">
-                    Tu registro ha sido exitoso. Ahora puedes <a href="login.php" class="link">Iniciar Sesión</a>
+                    Tu registro ha sido exitoso. Ahora puedes <a href="index.html" class="link text-danger">Iniciar Sesión</a>
                 </div>
             </div>
         </div>
     </div>
-
+<?php
+session_unset();
+session_destroy();
+?>
 
     <script>
 $(document).ready(function() {
